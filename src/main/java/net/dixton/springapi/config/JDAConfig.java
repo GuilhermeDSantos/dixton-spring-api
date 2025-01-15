@@ -16,7 +16,7 @@ public class JDAConfig {
 
     @Bean
     public JDA jda() throws Exception {
-        JDABuilder builder = JDABuilder.createDefault("MTMyNjE1Nzg1NTgxMTY5ODY5OA.Gqu8VN.gWGTCvZ2qsxrdMYuw2DMTnsGnojRLDgMTcDePs");
+        JDABuilder builder = JDABuilder.createDefault(System.getenv("JDA_TOKEN"));
 
         builder.enableIntents(
                 GatewayIntent.MESSAGE_CONTENT,
